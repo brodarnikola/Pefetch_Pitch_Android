@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.LoginActivity"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+    <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </Toolbar>
+
+    <TextView
+            android:id="@+id/tvInsertUsernamePassword"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unesite username i lozinku"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+    />
+
+    <EditText
+            android:id="@+id/etUsername"
+            android:layout_below="@+id/tvInsertUsernamePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:hint="Username"
+    />
+
+    <EditText
+            android:id="@+id/etPassword"
+            android:layout_below="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+    />
+
+
+    <LinearLayout
+            android:layout_below="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <TextView
+                android:id="@+id/tvBackendResponseErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="Zaboravili ste lozinku? Kliknite ovdje"
+                android:visibility="gone"
+        />
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+        />
+
+
+        <Button
+                android:id="@+id/btLogin"
+                android:layout_below="@+id/etPassword"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="SIGN IN"
+                android:textColor="@android:color/black"/>
+
+        <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_below="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:text="Zaboravili ste lozinku? Kliknite ovdje"
+        />
+
+    </LinearLayout>
+
+
+
+    <TextView
+            android:id="@+id/tvRegister"
+            android:layout_above="@+id/btRegisterActivity"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="Niste se jos registrirali?"
+    />
+
+    <Button
+            android:id="@+id/btRegisterActivity"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Registriraj"
+            android:textColor="@android:color/black"/>
+
+
+
+</RelativeLayout>

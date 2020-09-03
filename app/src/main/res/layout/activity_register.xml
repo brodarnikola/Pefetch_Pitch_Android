@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.LoginActivity"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+    <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </Toolbar>
+
+
+    <ScrollView
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvInsertUsernamePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unesite podatke za registraciju"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+            />
+
+
+            <EditText
+                    android:id="@+id/etName"
+                    android:layout_below="@+id/tvInsertUsernamePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Name"
+            />
+
+            <EditText
+                    android:id="@+id/etSurname"
+                    android:layout_below="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Surname"
+            />
+
+            <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_below="@+id/etSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Email"
+            />
+
+            <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_below="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Username"
+            />
+
+            <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_below="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Password"
+            />
+
+            <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                <TextView
+                        android:id="@+id/tvErrorMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:text="Zaboravili ste lozinku? Kliknite ovdje"
+                        android:visibility="gone"
+                />
+
+                <TextView
+                        android:id="@+id/tvForgotPassword"
+                        android:layout_below="@+id/tvErrorMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"
+                        android:text="Sva polja su obavezna!"
+                />
+
+                <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_above="@+id/btRegisterUser"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:visibility="gone"
+                />
+
+                <Button
+                        android:id="@+id/btRegisterUser"
+                        android:layout_below="@+id/tvForgotPassword"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Registriraj"
+                        android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
